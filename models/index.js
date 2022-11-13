@@ -5,7 +5,7 @@ const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
 // Products belongsTo Category
-  Products.belongsTo(Category,{
+  Product.belongsTo(Category,{
 
   })
 // Categories have many Products
@@ -13,12 +13,12 @@ const ProductTag = require('./ProductTag');
 
   })
 // Products belongToMany Tags (through ProductTag)
-  Products.belongstoMany(ProductTag,{
-
+  Product.belongsToMany(Tag,{
+    through: ProductTag
   })
 // Tags belongToMany Products (through ProductTag)
-  Tags.belongstoMany(ProductTag, {
-    
+  Tag.belongsToMany(Product, {
+    through: ProductTag
   })
 module.exports = {
   Product,
