@@ -29,12 +29,22 @@ router.get("/:id", async (req, res) => {
     // be sure to include its associated Products
   } catch (err) {
     console.error(err);
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   // create a new category
+  try{
+  Category.create({
+    category_name: req.body.category_name
+  })
+  .then(function(category){
+    res.json(category)
+  })
+  } catch (err) {
+    res.status(400).json(err)
+  }
 });
 
 router.put("/:id", (req, res) => {
