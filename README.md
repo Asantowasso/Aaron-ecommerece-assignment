@@ -9,3 +9,8 @@ This is an example of the back end of an ecommerce site. It is built off an SQL 
 A utility for the backend of a ecommerce or product listing service. The user is able to quickly view products with "get" requests add items and edit their attributes such as price "post", "put" and "delete" statements can be used to add and edit information.
 The changes can be viewed in insomnia or a web browser.
 
+## Image
+
+<img src = "assets/Aaron ecommerce.jpg">
+
+## Video Demonstration
